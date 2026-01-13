@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "rootDir": "./Scripts/src",
+    "outDir": "./BP/scripts/build",
+    "sourceMap": false,
+    "strict": true,
+    "skipLibCheck": true,
+    "moduleResolution": "Node",
+    "removeComments": true,
+  }
+}

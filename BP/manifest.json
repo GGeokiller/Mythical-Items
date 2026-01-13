@@ -1,0 +1,63 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Geokiller"
+		]
+	},
+	"header": {
+		"name": "pack.name",
+		"description": "pack.description",
+		"min_engine_version": [
+			1,
+			21,
+			90
+		],
+		"uuid": "ffec7705-5832-4c03-9c88-fd83409f9591",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "e289b6d2-19f2-4bfa-9731-d3c5631e7521",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"uuid": "750819d7-2ffa-4f88-ae39-3405439fc114",
+			"type": "script",
+			"language": "javascript",
+			"entry": "scripts/build/main/js/geo/main.js",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "5c417b7b-fb26-4126-a01e-cad1207eef7b",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.3.0"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "2.0.0"
+		}
+	]
+}
