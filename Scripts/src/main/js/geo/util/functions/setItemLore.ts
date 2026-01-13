@@ -26,7 +26,7 @@ const ItemArray = [
     new loreItem("sampleText", ["", `§r§7Rarity: ${RarityToLore[ItemRarityUtil.getItemRarity("sampleText")]} `, "", "§r§9ITEM LORE HERE"]),
 ];
 
-ItemArray.push(new loreItem(mojangItems.NetheriteSword, ["", `§r§7Rarity: ${RarityToLore[ItemRarityUtil.getItemRarity(mojangItems.NetheriteSword)]} `, "", "§r§9SampleText"]));
+//ItemArray.push(new loreItem(mojangItems.NetheriteSword, ["", `§r§7Rarity: ${RarityToLore[ItemRarityUtil.getItemRarity(mojangItems.NetheriteSword)]} `, "", "§r§9SampleText"]));
 
 for (const addon of Object.values(ExternalItems)) {
     for (const [rarity, items] of Object.entries(addon)) {

@@ -1,7 +1,6 @@
 import { world } from "@minecraft/server";
 import { ItemRarityUtil } from "./itemRarity";
 import { ExternalItems } from "../enum/ExternalItems";
-import { mojangItems } from "../enum/MojangItems";
 class loreItem {
     constructor(itemId, lore) {
         this.itemId = itemId;
@@ -20,7 +19,6 @@ const RarityToLore = {
 const ItemArray = [
     new loreItem("sampleText", ["", `§r§7Rarity: ${RarityToLore[ItemRarityUtil.getItemRarity("sampleText")]} `, "", "§r§9ITEM LORE HERE"]),
 ];
-ItemArray.push(new loreItem(mojangItems.NetheriteSword, ["", `§r§7Rarity: ${RarityToLore[ItemRarityUtil.getItemRarity(mojangItems.NetheriteSword)]} `, "", "§r§9SampleText"]));
 for (const addon of Object.values(ExternalItems)) {
     for (const [rarity, items] of Object.entries(addon)) {
         for (const itemData of Object.values(items)) {
