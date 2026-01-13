@@ -13,3 +13,7 @@ export const ExternalItems = {
         }
     }
 }
+
+export const MythicalItems = {
+    GoldenEnderPearl: "geo:golden_ender_pearl",
+}

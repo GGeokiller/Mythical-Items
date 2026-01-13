@@ -1,0 +1,32 @@
+{
+	"format_version": "1.21.120",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "geo:blank",
+			"is_summonable": true,
+			"is_spawnable": true
+		},
+		"component_groups": {
+			"geo:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:timer": {
+				"time": 0,
+				"time_down_event": {
+					"event": "geo:despawn"
+				}
+			}
+		},
+		"events": {
+			"geo:despawn": {
+				"add": {
+					"component_groups": [
+						"geo:despawn"
+					]
+				}
+			}
+		}
+	}
+}
