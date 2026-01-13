@@ -29,6 +29,8 @@ EntitySpawnListener.register((event) => {
 });
 let tickCounter = 0;
 system.runInterval(() => {
+    if (!world.getDynamicProperty("geo:enable_particles"))
+        return;
     tickCounter++;
     let particleDensity = world.getDynamicProperty("geo:particle_density");
     if (typeof particleDensity !== "number")
