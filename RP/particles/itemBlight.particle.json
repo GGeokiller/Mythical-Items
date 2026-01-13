@@ -12,10 +12,6 @@
 			"minecraft:emitter_initialization": {
 				"creation_expression": "variable.red;variable.green;variable.blue;variable.alpha;"
 			},
-			"minecraft:emitter_local_space": {
-				"position": true,
-				"rotation": false
-			},
 			"minecraft:emitter_rate_instant": {
 				"num_particles": 1
 			},
@@ -32,6 +28,7 @@
 				"size": [1, 1],
 				"facing_camera_mode": "emitter_transform_xz"
 			},
+			"minecraft:particle_appearance_lighting": {},
 			"minecraft:particle_appearance_tinting": {
 				"color": ["variable.red", "variable.green", "variable.blue", "((variable.particle_age / variable.particle_lifetime) < 0.5 ? (variable.particle_age / variable.particle_lifetime) * 2 : (1.0 - (variable.particle_age / variable.particle_lifetime)) * 2)*1"]
 			}
