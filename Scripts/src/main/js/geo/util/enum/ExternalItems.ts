@@ -1,5 +1,6 @@
 import { LootTableReference } from "@minecraft/server";
 import { ItemRarity, ItemRarityType } from "../functions/itemRarity";
+import { mojangItems } from "./MojangItems";
 
 export type ExternalItemData = {
     id: string;
@@ -23,7 +24,12 @@ export const ExternalItems: ExternalItemsType = {
     },
     MythicalItems: {
         rare: {
-            GoldenEnderPearl: { id: "geo:golden_ender_pearl", lore: undefined, raritylore: false }
+            GoldenEnderPearl: { id: "geo:golden_ender_pearl", lore: ["§r§5Instant teleportation", "§r§5Pearl infused in gold"], raritylore: true }
+        }
+    },
+    MojangItems: {
+        mythical: {
+            [mojangItems.DragonEgg]: { id: mojangItems.DragonEgg, lore: ["§r§5The dragon Egg"], raritylore: true },
         }
     }
 };

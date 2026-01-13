@@ -27,12 +27,7 @@ for (const addon of Object.values(ExternalItems)) {
             if (!itemData.raritylore)
                 continue;
             const id = itemData.id;
-            const loreText = [
-                "",
-                `§r§7Rarity: ${RarityToLore[rarity]}`,
-                "",
-                ...(itemData.lore ?? ["§r§9Custom item"])
-            ];
+            const loreText = ["", `§r§7Rarity: ${RarityToLore[rarity]}`, "", ...(itemData.lore ?? ["§r§9Custom item"])];
             ItemArray.push(new loreItem(id, loreText));
         }
     }

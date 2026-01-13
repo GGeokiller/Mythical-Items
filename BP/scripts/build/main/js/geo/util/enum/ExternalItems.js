@@ -1,3 +1,4 @@
+import { mojangItems } from "./MojangItems";
 export const ExternalItems = {
     SampleAddon: {
         mythical: {
@@ -8,8 +9,13 @@ export const ExternalItems = {
         }
     },
     MythicalItems: {
-        epic: {
-            GoldenEnderPearl: { id: "geo:golden_ender_pearl", lore: undefined, raritylore: false }
+        rare: {
+            GoldenEnderPearl: { id: "geo:golden_ender_pearl", lore: ["§r§5Instant teleportation", "§r§5Pearl infused in gold"], raritylore: true }
+        }
+    },
+    MojangItems: {
+        mythical: {
+            [mojangItems.DragonEgg]: { id: mojangItems.DragonEgg, lore: ["§r§5The dragon Egg"], raritylore: true },
         }
     }
 };

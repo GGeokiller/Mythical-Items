@@ -33,7 +33,7 @@ for (const addon of Object.values(ExternalItems)) {
         for (const itemData of Object.values(items)) {
             if (!itemData.raritylore) continue;
             const id = itemData.id;
-            const loreText = ["",`§r§7Rarity: ${RarityToLore[rarity as ItemRarityType]}`,"",...(itemData.lore ?? ["§r§9Custom item"])];
+            const loreText = ["",`§r§7Rarity: ${RarityToLore[rarity as ItemRarityType]}`,"", ...(itemData.lore ?? ["§r§9Custom item"])];
             ItemArray.push(new loreItem(id, loreText));
         }
     }

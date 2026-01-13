@@ -211,6 +211,8 @@ for (const [, addon] of Object.entries(ExternalItems)) {
         for (const itemData of Object.values(items)) {
             if (!itemData?.id)
                 continue;
+            if (targetSet.has(itemData.id))
+                continue;
             targetSet.add(itemData.id);
         }
     }
