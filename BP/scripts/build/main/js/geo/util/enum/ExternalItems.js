@@ -10,12 +10,12 @@ export const ExternalItems = {
     },
     MythicalItems: {
         rare: {
-            GoldenEnderPearl: { id: "geo:golden_ender_pearl", lore: ["§r§5Instant teleportation", "§r§5Pearl infused in gold"], raritylore: true }
+            GoldenEnderPearl: { id: "geo:golden_ender_pearl", lore: ["§r§9Instant teleportation, a Ender Pearl infused in gold"], raritylore: true }
         }
     },
     MojangItems: {
         mythical: {
-            [mojangItems.DragonEgg]: { id: mojangItems.DragonEgg, lore: ["§r§5The dragon Egg"], raritylore: true },
+            [mojangItems.DragonEgg]: { id: mojangItems.DragonEgg, lore: ["§r§9The dragon Egg"], raritylore: true },
         }
     }
 };
