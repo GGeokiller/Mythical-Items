@@ -1,15 +1,15 @@
 export const ExternalItems = {
     SampleAddon: {
         mythical: {
-            ItemSample: "sample_addon:item_sample"
+            ItemSample: { id: "sample_addon:item_sample", lore: undefined }
         },
         uncommon: {
-            ItemExample: "sample_addon:item_example"
+            ItemExample: { id: "sample_addon:item_example", lore: undefined }
         }
     },
     MythicalItems: {
-        mythical: {
-            Murasama: "geo:murasama",
+        epic: {
+            GoldenEnderPearl: { id: "geo:golden_ender_pearl", lore: undefined }
         }
     }
 };

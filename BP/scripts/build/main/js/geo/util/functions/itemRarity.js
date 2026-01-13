@@ -208,10 +208,10 @@ for (const [, addon] of Object.entries(ExternalItems)) {
         if (!(rarity in RARITY_TO_SET))
             continue;
         const targetSet = RARITY_TO_SET[rarity];
-        for (const itemId of Object.values(items)) {
-            if (typeof itemId !== "string")
+        for (const itemData of Object.values(items)) {
+            if (!itemData?.id)
                 continue;
-            targetSet.add(itemId);
+            targetSet.add(itemData.id);
         }
     }
 }

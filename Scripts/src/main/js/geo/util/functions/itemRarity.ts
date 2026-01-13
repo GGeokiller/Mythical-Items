@@ -217,19 +217,21 @@ const RARITY_TO_SET: Record<ItemRarityType, Set<string>> = {
 };
 
 
+
 for (const [, addon] of Object.entries(ExternalItems)) {
     for (const [rarity, items] of Object.entries(addon)) {
-
         if (!(rarity in RARITY_TO_SET)) continue;
 
         const targetSet = RARITY_TO_SET[rarity as ItemRarityType];
 
-        for (const itemId of Object.values(items)) {
-            if (typeof itemId !== "string") continue;
-            targetSet.add(itemId);
+        // agregar cada item al Set correspondiente
+        for (const itemData of Object.values(items)) {
+            if (!itemData?.id) continue;
+            targetSet.add(itemData.id);
         }
     }
 }
+
 
 
 

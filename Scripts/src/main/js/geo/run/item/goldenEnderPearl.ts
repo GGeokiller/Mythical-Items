@@ -11,7 +11,7 @@ world.beforeEvents.itemUse.subscribe((eventData) => {
 function useGoldenEnderPearl(eventData: ItemUseBeforeEvent) {
     const {source: player, itemStack, cancel} = eventData;
     system.runTimeout(() => {
-        if (!isItemCooldownReady(player, itemStack)) return;
+        if (!isItemCooldownReady(player, itemStack) && itemStack.amount > 1) return;
         let blockRayCast = player.getBlockFromViewDirection({maxDistance: 96, includeLiquidBlocks: false, includePassableBlocks: false});
         const blockFromRay = blockRayCast?.block
         if (!blockFromRay) {
