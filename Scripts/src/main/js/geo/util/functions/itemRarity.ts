@@ -224,7 +224,6 @@ for (const [, addon] of Object.entries(ExternalItems)) {
 
         const targetSet = RARITY_TO_SET[rarity as ItemRarityType];
 
-        // agregar cada item al Set correspondiente
         for (const itemData of Object.values(items)) {
             if (!itemData?.id) continue;
             targetSet.add(itemData.id);

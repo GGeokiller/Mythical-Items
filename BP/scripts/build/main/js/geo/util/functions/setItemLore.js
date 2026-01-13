@@ -8,13 +8,6 @@ class loreItem {
         this.lore = lore;
     }
 }
-const uncommon = "§r§l§aUncommon";
-const rare = "§r§l§bRare";
-const epic = "§r§l§uEpic";
-const legendary = "§r§l§6Legendary";
-const mythical = "§r§l§cMythic";
-const murasama = "§r§l§4Murasama";
-const CALIDAD_REEMPLAZA_ESTO = "Default_quality";
 const RarityToLore = {
     common: "§fCommon",
     uncommon: "§aUncommon",
@@ -31,6 +24,8 @@ ItemArray.push(new loreItem(mojangItems.NetheriteSword, ["", `§r§7Rarity: ${Ra
 for (const addon of Object.values(ExternalItems)) {
     for (const [rarity, items] of Object.entries(addon)) {
         for (const itemData of Object.values(items)) {
+            if (!itemData.raritylore)
+                continue;
             const id = itemData.id;
             const loreText = [
                 "",
