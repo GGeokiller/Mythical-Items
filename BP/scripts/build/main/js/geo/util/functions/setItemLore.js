@@ -28,6 +28,7 @@ for (const addon of Object.values(ExternalItems)) {
             const loreText = [];
             loreText.push("", `§r§7Rarity: ${RarityToLore[rarity]}`);
             if (itemData.lore && itemData.lore.length > 0) {
+                loreText.push("");
                 loreText.push(...itemData.lore);
             }
             ItemLoreArray.push(new loreItem(id, loreText));

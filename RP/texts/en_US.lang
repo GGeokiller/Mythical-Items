@@ -1,3 +1,12 @@
 pack.name=§9Mythical Items §a[1.21.130]
 pack.description=§uItems glow with particles depending on rarity. §dBy Geokiller
+
+## Items
 item.geo:golden_ender_pearl=Golden Ender Pearl
+item.geo:soul_of_light=Soul of Light
+item.geo:chronotorch=Chronotorch
+
+## Script Lang
+geo.golden_ender_pearl.failure=§cTeleportation failed! The block was too far away or obstructed!
+geo.chronotorch.failure=§cNot enough experience to use the Chronotorch!
+item.geo:soul_of_darkness=Soul of Darkness

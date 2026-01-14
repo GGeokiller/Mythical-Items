@@ -1,7 +1,8 @@
-import { system, world } from "@minecraft/server";
+import { system } from "@minecraft/server";
 import { MythicalItems } from "../../util/enum/ExternalItems";
-import { giveItem, isItemCooldownReady, getBlockFacelocation } from "../../util/functions/mainFunctions";
-world.beforeEvents.itemUse.subscribe((eventData) => {
+import { giveItem, isItemCooldownReady, getBlockFacelocation, GeoRandom } from "../../util/functions/mainFunctions";
+import { ItemUseBeforeListener } from "../../listeners/itemUse";
+ItemUseBeforeListener.register((eventData) => {
     if (eventData.itemStack.typeId !== MythicalItems.GoldenEnderPearl)
         return;
     useGoldenEnderPearl(eventData);
@@ -14,6 +15,7 @@ function useGoldenEnderPearl(eventData) {
         let blockRayCast = player.getBlockFromViewDirection({ maxDistance: 96, includeLiquidBlocks: false, includePassableBlocks: false });
         const blockFromRay = blockRayCast?.block;
         if (!blockFromRay) {
+            runGoldenEnderPearlTeleportFailure(player);
             giveItem(player, MythicalItems.GoldenEnderPearl, 1);
             return;
         }
@@ -28,8 +30,15 @@ function useGoldenEnderPearl(eventData) {
             else {
                 teleportLocation = blockFromRay.above(1)?.center() ?? player.location;
             }
-            player.teleport(teleportLocation);
-            player.playSound("mob.shulker.teleport", { volume: 100, pitch: 1, location: teleportLocation });
+            runGoldenEnderPearlTeleportSuccess(player, teleportLocation);
         }
     }, 0);
+}
+function runGoldenEnderPearlTeleportSuccess(player, location) {
+    player.teleport(location);
+    player.playSound("mob.shulker.teleport", { volume: 100, pitch: GeoRandom(0.8, 1.2), location: location });
+}
+function runGoldenEnderPearlTeleportFailure(player) {
+    player.playSound("random.break", { volume: 1, pitch: GeoRandom(0.8, 1.2) });
+    player.sendMessage({ rawtext: [{ translate: "geo.golden_ender_pearl.failure" }] });
 }

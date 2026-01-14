@@ -14,6 +14,9 @@ export type ExternalItemsType = Record<
 
 export const MythicalItems = {
     GoldenEnderPearl: "geo:golden_ender_pearl",
+    Chronotorch: "geo:chronotorch",
+    SoulOfLight: "geo:soul_of_light",
+    SoulOfDarkness: "geo:soul_of_darkness",
 }
 
 export const ZomboLegend = {
@@ -43,8 +46,15 @@ export const ExternalItems: ExternalItemsType = {
         }
     },
     MythicalItems: {
+        uncommon: {
+            [MythicalItems.SoulOfLight]: { id: MythicalItems.SoulOfLight, lore: ["§r§9Used in crafting powerful items"], raritylore: true },
+            [MythicalItems.SoulOfDarkness]: { id: MythicalItems.SoulOfDarkness, lore: ["§r§9Used in crafting powerful items"], raritylore: true },
+        },
         rare: {
-            [MythicalItems.GoldenEnderPearl]: { id: MythicalItems.GoldenEnderPearl, lore: ["§r§9Instant teleportation, a Ender Pearl infused in gold"], raritylore: true }
+            [MythicalItems.GoldenEnderPearl]: { id: MythicalItems.GoldenEnderPearl, lore: ["§r§9Teleports instantly up to 96 blocks"], raritylore: true },
+        },
+        epic: {
+            [MythicalItems.Chronotorch]: { id: MythicalItems.Chronotorch, lore: ["§r§9Consumes 5 experience levels to manipulate time", "§r§9Advances the world by 6000 ticks"], raritylore: true },
         }
     },
     ZomboLegendItems: {

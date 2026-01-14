@@ -55,3 +55,47 @@ export const Directions = {
 export function getBlockFacelocation(block, blockFace) {
     return addVector3(block.center(), Directions[blockFace]);
 }
+export function getPlayerExperienceLevel(player) {
+    const xp = player.getTotalXp();
+    let total = 0;
+    let level = 0;
+    while (true) {
+        let xpToNext;
+        if (level < 16) {
+            xpToNext = 2 * level + 7;
+        }
+        else if (level < 31) {
+            xpToNext = 5 * level - 38;
+        }
+        else {
+            xpToNext = 9 * level - 158;
+        }
+        if (total + xpToNext > xp)
+            break;
+        total += xpToNext;
+        level++;
+    }
+    return level;
+}
+export function removePlayerExperienceLevels(player, levelsToRemove) {
+    player.runCommand(`xp -${levelsToRemove}L @s`);
+}
+;
+export function GeoRandom(min, max) {
+    return (Math.random() * (max - min + 1)) + min;
+}
+export function GeoRandomInt(min, max) {
+    return Math.floor(GeoRandom(min, max));
+}
+export function chancePercentaje(percent) {
+    return GeoRandomInt(1, 100) <= percent;
+}
+export function chanceOutOf(chance, outOf) {
+    if (outOf <= 0)
+        return false;
+    if (chance <= 0)
+        return false;
+    if (chance >= outOf)
+        return true;
+    return GeoRandomInt(1, outOf) <= chance;
+}

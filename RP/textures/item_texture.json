@@ -2,6 +2,15 @@
 	"texture_data": {
 		"golden_ender_pearl": {
 			"textures": "textures/items/golden_ender_pearl"
+		},
+		"soul_of_light": {
+			"textures": "textures/items/soul_of_light"
+		},
+		"soul_of_darkness": {
+			"textures": "textures/items/soul_of_darkness"
+		},
+		"chronotorch": {
+			"textures": "textures/items/chronotorch"
 		}
 	}
 }

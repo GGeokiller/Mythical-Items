@@ -1,1 +1,2 @@
 import "./goldenEnderPearl"
+import "./Chronotorch"

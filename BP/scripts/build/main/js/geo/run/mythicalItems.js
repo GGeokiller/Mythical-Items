@@ -14,7 +14,9 @@ EntitySpawnListener.register((event) => {
     const { entity, cause } = event;
     if (entity?.typeId !== Entities.item)
         return;
-    const itemComponent = entity.getComponent("minecraft:item");
+    if (!entity.isValid)
+        return;
+    const itemComponent = entity?.getComponent("minecraft:item");
     if (!itemComponent)
         return;
     const itemStack = itemComponent.itemStack;
