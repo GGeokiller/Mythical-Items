@@ -1,4 +1,5 @@
 import { ItemStack, system, world } from "@minecraft/server";
+import { ItemLoreArray, setLoreToItem } from "./setItemLore";
 export function getDistanceVector3(vector1, vector2) {
     const dx = vector2.x - vector1.x;
     const dy = vector2.y - vector1.y;
@@ -13,6 +14,10 @@ export function sendMessageToWorld(message) {
 ;
 export function giveItem(player, itemId, amount = 1) {
     let itemStack = new ItemStack(itemId, amount);
+    let findLore = ItemLoreArray.find(x => x.itemId == itemId);
+    if (findLore) {
+        setLoreToItem(itemStack, findLore.lore);
+    }
     let playerInventory = player.getComponent("inventory")?.container;
     if (!playerInventory)
         return;

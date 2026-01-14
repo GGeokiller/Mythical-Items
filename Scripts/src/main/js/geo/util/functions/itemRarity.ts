@@ -24,7 +24,7 @@ export type ItemRarityType =
 
 
 const MYTHICAL_ITEMS = new Set<string>([
-    mojangItems.DragonEgg,
+/*     mojangItems.DragonEgg,
     mojangItems.Barrier,
     mojangItems.Jigsaw,
     mojangItems.LightBlock0,
@@ -48,19 +48,19 @@ const MYTHICAL_ITEMS = new Set<string>([
     mojangItems.ChainCommandBlock,
     mojangItems.StructureBlock,
     mojangItems.StructureVoid,
-    mojangItems.CommandBlockMinecart,
+    mojangItems.CommandBlockMinecart, */
 ]);
 
 const LEGENDARY_ITEMS = new Set<string>([
-    mojangItems.Elytra,
+/*     mojangItems.Elytra,
     mojangItems.DragonHead,
     mojangItems.SilenceArmorTrimSmithingTemplate,
     mojangItems.Mace,
-    mojangItems.HeavyCore,
+    mojangItems.HeavyCore, */
 ]);
 
 const EPIC_ITEMS = new Set<string>([
-    mojangItems.Elytra,
+/*     mojangItems.Elytra,
     mojangItems.FlowBannerPattern,
     mojangItems.GusterBannerPattern,
     mojangItems.SkullBannerPattern,
@@ -92,11 +92,11 @@ const EPIC_ITEMS = new Set<string>([
     mojangItems.NetheriteHorseArmor,
     mojangItems.NetheriteNautilusArmor,
     mojangItems.NetheriteSpear,
-    mojangItems.MusicDiscLavaChicken
+    mojangItems.MusicDiscLavaChicken */
 ]);
 
 const RARE_ITEMS = new Set<string>([
-    mojangItems.Diamond,
+/*     mojangItems.Diamond,
     mojangItems.CreeperBannerPattern,
     mojangItems.PlayerHead,
     mojangItems.ZombieHead,
@@ -150,11 +150,11 @@ const RARE_ITEMS = new Set<string>([
     mojangItems.ExperienceBottle,
     mojangItems.Conduit,
     mojangItems.HeartOfTheSea,
-    mojangItems.DragonBreath
+    mojangItems.DragonBreath */
 ]);
 
 const UNCOMMON_ITEMS = new Set<string>([
-    mojangItems.IronIngot,
+/*     mojangItems.IronIngot,
     mojangItems.GoldIngot,
     mojangItems.DiamondBlock,
     mojangItems.GoldBlock,
@@ -204,7 +204,7 @@ const UNCOMMON_ITEMS = new Set<string>([
     mojangItems.EnderPearl,
     mojangItems.EnderEye,
     mojangItems.TrialKey,
-    mojangItems.OminousTrialKey
+    mojangItems.OminousTrialKey */
 ]);
 
 const RARITY_TO_SET: Record<ItemRarityType, Set<string>> = {

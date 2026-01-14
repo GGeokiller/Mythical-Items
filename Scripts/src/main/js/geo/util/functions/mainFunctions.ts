@@ -1,4 +1,5 @@
 import { Block, Direction, ItemStack, ItemType, Player, system, Vector3, world } from "@minecraft/server";
+import { ItemLoreArray, setLoreToItem } from "./setItemLore";
 
 /**
  * @param {Vector3} vector1 - The first Vector3 object.
@@ -27,6 +28,10 @@ export function sendMessageToWorld(message: string): void {
 
 export function giveItem(player: Player, itemId: ItemType | string, amount: number = 1): void {
     let itemStack = new ItemStack(itemId, amount)
+    let findLore = ItemLoreArray.find(x => x.itemId == itemId);
+    if (findLore) {
+        setLoreToItem(itemStack, findLore.lore);
+    }
     let playerInventory = player.getComponent("inventory")?.container;
     if (!playerInventory) return;
 
