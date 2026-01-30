@@ -9,7 +9,7 @@ import { ItemUseBeforeListener } from "../../listeners/itemUse";
     useGoldenEnderPearl(eventData);
 }); */
 
-ItemUseBeforeListener.register((eventData: ItemUseBeforeEvent) => {
+/* ItemUseBeforeListener.register((eventData: ItemUseBeforeEvent) => {
     if (eventData.itemStack.typeId !== MythicalItems.GoldenEnderPearl) return;
     useGoldenEnderPearl(eventData);
 });
@@ -46,4 +46,4 @@ function runGoldenEnderPearlTeleportSuccess(player: Player, location: Vector3) {
 function runGoldenEnderPearlTeleportFailure(player: Player) {
     player.playSound("random.break", {volume: 1, pitch: GeoRandom(0.8, 1.2)});
     player.sendMessage({rawtext: [{translate: "geo.golden_ender_pearl.failure"}]})
-}
+} */

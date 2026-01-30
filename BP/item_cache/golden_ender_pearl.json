@@ -1,4 +1,4 @@
-{
+/* {
 	"format_version": "1.20.60",
 	"minecraft:item": {
 		"description": {
@@ -24,4 +24,4 @@
 			"minecraft:glint": true
 		}
 	}
-}
+} */

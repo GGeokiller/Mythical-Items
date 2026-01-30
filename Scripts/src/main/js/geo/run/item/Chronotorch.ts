@@ -3,7 +3,7 @@ import { ItemUseBeforeListener } from "../../listeners/itemUse";
 import { MythicalItems } from "../../util/enum/ExternalItems";
 import { GeoRandom, getPlayerExperienceLevel, removePlayerExperienceLevels } from "../../util/functions/mainFunctions";
 
-ItemUseBeforeListener.register((eventData: ItemUseBeforeEvent) => {
+/* ItemUseBeforeListener.register((eventData: ItemUseBeforeEvent) => {
     if (eventData.itemStack?.typeId !== MythicalItems.Chronotorch) return;
     useChronotorch(eventData);
 })
@@ -32,4 +32,4 @@ function runChronotorchEffectSuccess(player: Player) {
 function runChronotorchEffectFailure(player: Player) {
     player.playSound("random.break", {volume: 1, pitch: GeoRandom(0.8, 1.2)});
     player.sendMessage({rawtext: [{translate: "geo.chronotorch.failure"}]})
-}
+} */
