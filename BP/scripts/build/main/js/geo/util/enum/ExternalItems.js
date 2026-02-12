@@ -20,7 +20,15 @@ export const SampleAddon = {
     ItemSample: "sample_addon:item_sample",
     ItemExample: "sample_addon:item_example",
 };
+export const TotemOverhaul = {
+    CustomTotem: "eu:custom_totem"
+};
 export const ExternalItems = {
+    TotemOverhaul: {
+        mythical: {
+            [TotemOverhaul.CustomTotem]: { id: TotemOverhaul.CustomTotem, lore: ["§r§9A custom totem from the Totem Overhaul addon"], raritylore: true }
+        }
+    },
     SampleAddonItems: {
         mythical: {
             [SampleAddon.ItemSample]: { id: SampleAddon.ItemSample, lore: undefined, raritylore: false }

@@ -18,7 +18,7 @@ system.beforeEvents.startup.subscribe((init) => {
     const configCommand = {
         name: "mythical:config",
         description: "Basic Configuration for particles",
-        permissionLevel: CommandPermissionLevel.Admin,
+        permissionLevel: CommandPermissionLevel.GameDirectors,
     };
     init.customCommandRegistry.registerCommand(configCommand, handleConfigCommand);
 });
